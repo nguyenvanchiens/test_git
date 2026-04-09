@@ -21,7 +21,7 @@ pipeline {
         stage('Run App') {
             steps {
                 bat "taskkill /IM dotnet.exe /F 2>nul & exit /b 0"
-                bat "powershell -Command \"Start-Process dotnet -ArgumentList '%WORKSPACE%\\publish\\${params.PROJECT}\\${params.PROJECT}.dll' -WindowStyle Hidden\""
+                bat "powershell -Command \"Start-Process dotnet -ArgumentList '%WORKSPACE%\\publish\\${params.PROJECT}\\${params.PROJECT}.dll' -WorkingDirectory '%WORKSPACE%\\publish\\${params.PROJECT}' -WindowStyle Hidden\""
             }
         }
     }
