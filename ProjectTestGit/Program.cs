@@ -1,29 +1,28 @@
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddControllersWithViews();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+pipeline {
+    agent any
+    parameters {
+        choice(
+            name: 'PROJECT',
+            choices: ['ProjectTestGit', 'ProjectA', 'ProjectB', 'ProjectC'],
+            description: 'Chọn project cần build'
+        )
+    }
+    stages {
+        stage('Build') {
+            steps {
+                bat "dotnet build ${params.PROJECT}/${params.PROJECT}.csproj"
+            }
+        }
+        stage('Publish') {
+            steps {
+                bat "dotnet publish ${params.PROJECT}/${params.PROJECT}.csproj -c Release -o publish\\${params.PROJECT}"
+            }
+        }
+        stage('Run App') {
+            steps {
+                bat "taskkill /IM dotnet.exe /F 2>nul & exit /b 0"
+                bat "powershell -Command \"Start-Process dotnet -ArgumentList '%WORKSPACE%\\publish\\${params.PROJECT}\\${params.PROJECT}.dll' -WindowStyle Hidden\""
+            }
+        }
+    }
 }
-
-//app.UseHttpsRedirection();
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapStaticAssets();
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
-
-
-app.Run("http://0.0.0.0:5000");
