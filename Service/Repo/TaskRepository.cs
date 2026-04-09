@@ -12,5 +12,7 @@ namespace Service.Repo
         }
         public TaskRepository(string name) { }
 
+        public TaskRepository(string name, double a) { }
+
     }
 }
