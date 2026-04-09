@@ -15,5 +15,10 @@ namespace Service.Service
         {
             return "";
         }
+
+        public string Hello3()
+        {
+            return "";
+        }
     }
 }
