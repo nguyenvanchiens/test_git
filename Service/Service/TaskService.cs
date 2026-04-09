@@ -23,7 +23,7 @@ namespace Service.Service
 
         public string Hello4()
         {
-            return "demo123123";
+            return "";
         }
     }
 }
