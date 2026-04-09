@@ -6,5 +6,11 @@ namespace Service.Repo
 {
     public class TaskRepository
     {
+        public TaskRepository()
+        {
+
+        }
+        public TaskRepository(string name) { }
+
     }
 }
