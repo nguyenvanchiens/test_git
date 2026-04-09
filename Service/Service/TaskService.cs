@@ -20,5 +20,10 @@ namespace Service.Service
         {
             return "";
         }
+
+        public string Hello4()
+        {
+            return "demo123123";
+        }
     }
 }
