@@ -6,5 +6,14 @@ namespace Service.Service
 {
     public class TaskService
     {
+        public string Hello()
+        {
+            return "";
+        }
+
+        public string Hello2()
+        {
+            return "";
+        }
     }
 }
