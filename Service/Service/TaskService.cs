@@ -28,7 +28,8 @@ namespace Service.Service
 
         public string Hello5()
         {
-            return "";
+            return "sua loi";
         }
+
     }
 }
