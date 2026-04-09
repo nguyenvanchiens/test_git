@@ -15,7 +15,10 @@ namespace Service.Repo
         public TaskRepository(string name, double a) { }
 
 
-        public TaskRepository(string name, double a, double c) { }
+        public TaskRepository(string name, double a, double c, double d) { }
+
+
+        public TaskRepository(string name, double a, string c) { }
 
     }
 }
