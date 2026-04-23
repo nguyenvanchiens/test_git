@@ -8,4 +8,7 @@
     <Project Path="Service/Service.csproj" />
   </Folder>
   <Project Path="ProjectTestGit/ProjectTestGit.csproj" />
+  <Folder Name="/Tests/">
+    <Project Path="Tests/Tests.csproj" />
+  </Folder>
 </Solution>
