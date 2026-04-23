@@ -29,3 +29,35 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+/* Login page styles */
+.login-body {
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  margin-bottom: 0;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.login-card .input-group-text {
+  background-color: #fff;
+  color: #6c757d;
+}
+
+.login-card .btn-primary {
+  padding: 0.6rem;
+  font-weight: 500;
+}
