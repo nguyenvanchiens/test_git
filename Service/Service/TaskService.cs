@@ -46,5 +46,10 @@ namespace Service.Service
         {
             return a + b + c;
         }
+
+        public int Testnhan(int a, int b)
+        {
+            return a * b;
+        }
     }
 }
