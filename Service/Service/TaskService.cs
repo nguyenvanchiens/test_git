@@ -1,24 +1,19 @@
-﻿using Service.Repo;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Service.Service
 {
-    public class TaskService : ITaskService
+    public class TaskService
     {
-        private readonly ITaskRepository _taskRepository;
-
-        public TaskService(ITaskRepository taskRepository)
-        {
-            _taskRepository = taskRepository;
-        }
-
         public string Hello()
         {
-            return _taskRepository.GetA();
+            return "";
         }
 
         public string Hello2()
         {
-            return _taskRepository.GetB();
+            return "";
         }
 
         public string Hello3()
@@ -35,5 +30,6 @@ namespace Service.Service
         {
             return "sua loi";
         }
+
     }
 }

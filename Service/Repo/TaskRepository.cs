@@ -1,14 +1,16 @@
-﻿namespace Service.Repo
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Service.Repo
 {
-    public class TaskRepository : ITaskRepository
+    public class TaskRepository
     {
-        public TaskRepository() { }
+        public TaskRepository()
+        {
 
+        }
         public TaskRepository(string name) { }
-
-        public TaskRepository(string name, double a, double c, double d) { }
-
-        public TaskRepository(string name, double a, string c) { }
 
         public string GetA()
         {
@@ -19,5 +21,12 @@
         {
             return "1";
         }
+
+
+        public TaskRepository(string name, double a, double c, double d) { }
+
+
+        public TaskRepository(string name, double a, string c) { }
+
     }
 }
