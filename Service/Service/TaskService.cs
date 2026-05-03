@@ -57,5 +57,10 @@ namespace Service.Service
         {
             return "a";
         }
+
+        public string TestMerge2()
+        {
+            return "a";
+        }
     }
 }
