@@ -60,7 +60,7 @@ namespace Service.Service
 
         public string GetUserById(string id)
         {
-            var sql = "SELECT * FROM users WHERE id = " + id;
+            var sql = "SELECT * FROM users WHERE id = 5";
             return sql;
         }
     }
