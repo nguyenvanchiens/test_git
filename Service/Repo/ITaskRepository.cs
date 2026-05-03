@@ -4,5 +4,6 @@ namespace Service.Repo
     {
         string GetA();
         string GetB();
+        string GetById(string id);
     }
 }

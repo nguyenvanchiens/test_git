@@ -15,6 +15,11 @@
             return "";
         }
 
+        public string GetById(string id)
+        {
+            return id;
+        }
+
         public string GetB()
         {
             return "1";
