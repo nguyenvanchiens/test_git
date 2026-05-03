@@ -57,5 +57,11 @@ namespace Service.Service
         {
             return "a";
         }
+
+        public string GetUserById(string id)
+        {
+            var sql = "SELECT * FROM users WHERE id = " + id;
+            return sql;
+        }
     }
 }
