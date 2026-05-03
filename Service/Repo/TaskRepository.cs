@@ -17,7 +17,15 @@
 
         public string GetById(string id)
         {
-            return id;
+            var b = id;
+            if (id == "1")
+            {
+                return "admin";
+            }
+            else
+            {
+                return "user";
+            }
         }
 
         public string GetB()
