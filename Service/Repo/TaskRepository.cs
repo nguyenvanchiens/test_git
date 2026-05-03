@@ -17,15 +17,15 @@
 
         public string GetById(string id)
         {
-            var b = id;
-            if (id == "1")
+            if (string.IsNullOrWhiteSpace(id))
+                throw new ArgumentException("id is required.", nameof(id));
+
+            return id switch
             {
-                return "admin";
-            }
-            else
-            {
-                return "user";
-            }
+                "1" => "admin",
+                "2" => "user",
+                _ => throw new InvalidOperationException($"No user mapped for id '{id}'.")
+            };
         }
 
         public string GetB()
