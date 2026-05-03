@@ -52,5 +52,10 @@ namespace Service.Service
             int c = 5;
             return a * b;
         }
+
+        public string TestMerge()
+        {
+            return "a";
+        }
     }
 }
