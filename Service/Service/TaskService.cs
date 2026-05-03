@@ -58,6 +58,11 @@ namespace Service.Service
             return "a";
         }
 
+        public string TestMerge2()
+        {
+            return "a";
+        }
+
         public string GetUserById(string id)
         {
             var sql = "SELECT * FROM users WHERE id = 5";
