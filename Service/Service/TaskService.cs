@@ -1,19 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Service.Repo;
 
 namespace Service.Service
 {
-    public class TaskService
+    public class TaskService : ITaskService
     {
+        private readonly ITaskRepository _taskRepository;
+
+        public TaskService(ITaskRepository taskRepository)
+        {
+            _taskRepository = taskRepository;
+        }
+
         public string Hello()
         {
-            return "";
+            return _taskRepository.GetA();
         }
 
         public string Hello2()
         {
-            return "";
+            return _taskRepository.GetB();
         }
 
         public string Hello3()
@@ -31,5 +36,37 @@ namespace Service.Service
             return "sua loi";
         }
 
+
+        public int Sum(int a, int b)
+        {
+            return a + b;
+        }
+
+        public int Sum(int a, int b, int c)
+        {
+            return a + b + c;
+        }
+
+        public int Testnhan(int a, int b)
+        {
+            int c = 5;
+            return a * b;
+        }
+
+        public string TestMerge()
+        {
+            return "a";
+        }
+
+        public string TestMerge2()
+        {
+            return "a";
+        }
+
+        public string GetUserById(string id)
+        {
+            var query = "SELECT * FROM User where id" + id;
+            return query;
+        }
     }
 }
