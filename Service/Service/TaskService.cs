@@ -62,5 +62,11 @@ namespace Service.Service
         {
             return "a";
         }
+
+        public string GetUserById(string id)
+        {
+            var rs = _taskRepository.GetById(id);
+            return rs;
+        }
     }
 }

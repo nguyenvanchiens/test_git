@@ -15,6 +15,19 @@
             return "";
         }
 
+        public string GetById(string id)
+        {
+            if (string.IsNullOrWhiteSpace(id))
+                throw new ArgumentException("id is required.", nameof(id));
+
+            return id switch
+            {
+                "1" => "admin",
+                "2" => "user",
+                _ => throw new InvalidOperationException($"No user mapped for id '{id}'.")
+            };
+        }
+
         public string GetB()
         {
             return "1";
