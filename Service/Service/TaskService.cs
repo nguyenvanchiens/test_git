@@ -65,8 +65,8 @@ namespace Service.Service
 
         public string GetUserById(string id)
         {
-            var rs = _taskRepository.GetById(id);
-            return rs;
+            var query = "SELECT * FROM User where id" + id;
+            return query;
         }
     }
 }
